@@ -18,6 +18,25 @@ public class Recipe {
         System.out.println("skladniki: " + ingredients);
         System.out.println("czas wykonania: " + executionTime);
         System.out.println("opis: " + description);
+        System.out.println();
     }
 
+    public void formatRecipe() {
+        String[] splitDescription = description.split("\\.");
+        description = "";
+        for (int i = 0; i < splitDescription.length; i++) {
+            if (i % 2 != 0 || i == 0) {
+                description += splitDescription[i];
+                description += ".";
+            } else {
+                description += "\n";
+                description += splitDescription[i];
+                description += ".";
+            }
+
+        }
+        description += "\n Zachęcam do zapoznania się z innymi przepisami";
+        System.out.println("sformatowano poprawnie");
+        System.out.println();
+    }
 }

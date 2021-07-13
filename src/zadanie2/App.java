@@ -18,7 +18,8 @@ public class App {
             System.out.println("Jaką czynnosc chcesz wykonac?");
             System.out.println("Dodać przepis wcisnij 1");
             System.out.println("wyswietlic przepis wcisnij 2");
-            System.out.println("zakonczyc dzialanie programu wcisnij 3");
+            System.out.println("formatowac wcisnij 3");
+            System.out.println("zakonczyc dzialanie programu wcisnij 4");
             decision = scanner.nextInt();
 
             switch (decision) {
@@ -47,9 +48,14 @@ public class App {
                     System.out.println("podaj id przepisu");
                     index = scanner.nextInt();
                     cookbook.displayRecipe(index);
-
+                    break;
+                case 3:
+                    System.out.println("podaj id przepisu do formatowania");
+                    index = scanner.nextInt();
+                    cookbook.formatRecipe(index);
+                    break;
             }
-        } while (decision != 3);
+        } while (decision != 4);
 
     }
 }

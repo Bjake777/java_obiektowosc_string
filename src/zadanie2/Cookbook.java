@@ -17,4 +17,9 @@ public class Cookbook {
     public void displayRecipe(int index) {
         recipes[index].dispalyRecipe();
     }
+    public void formatRecipe(int index) {
+        recipes[index].formatRecipe();
+    }
+
+
 }
